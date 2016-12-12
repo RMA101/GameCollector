@@ -56,15 +56,23 @@
 		705802C91DFEF98600FD3F7E /* GameCollector */ = {
 			isa = PBXGroup;
 			children = (
-				705802CA1DFEF98600FD3F7E /* AppDelegate.swift */,
 				705802CC1DFEF98600FD3F7E /* ViewController.swift */,
 				705802CE1DFEF98600FD3F7E /* Main.storyboard */,
+				705802DF1DFEFB7F00FD3F7E /* Supporting Files */,
+			);
+			path = GameCollector;
+			sourceTree = "<group>";
+		};
+		705802DF1DFEFB7F00FD3F7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				705802D41DFEF98600FD3F7E /* Assets.xcassets */,
+				705802CA1DFEF98600FD3F7E /* AppDelegate.swift */,
 				705802D61DFEF98600FD3F7E /* LaunchScreen.storyboard */,
 				705802D91DFEF98600FD3F7E /* Info.plist */,
 				705802D11DFEF98600FD3F7E /* GameCollector.xcdatamodeld */,
 			);
-			path = GameCollector;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
