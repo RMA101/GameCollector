@@ -36,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="ula-Mo-B8C">
             <objects>
-                <viewController id="gKj-Ww-YkR" sceneMemberID="viewController">
+                <viewController id="gKj-Ww-YkR" customClass="GameViewController" customModule="GameCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mWL-ku-ySa"/>
                         <viewControllerLayoutGuide type="bottom" id="c5y-Vf-cbW"/>
@@ -48,13 +48,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Oo-rh-BSj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asset 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Oo-rh-BSj">
                                 <rect key="frame" x="47" y="105" width="280" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="UBQ-RS-Kx3"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7iI-fM-AGz">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7iI-fM-AGz">
                                 <rect key="frame" x="47" y="276" width="280" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -63,6 +63,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28b-Ih-ADG">
                                 <rect key="frame" x="172" y="318" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="gKj-Ww-YkR" eventType="touchUpInside" id="qfO-Yl-i5P"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -79,10 +82,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="GAT-pL-bja">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="iNb-E5-DtZ"/>
-                            <barButtonItem title="Photos" id="ArB-HK-2GV"/>
+                            <barButtonItem systemItem="camera" id="iNb-E5-DtZ">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="gKj-Ww-YkR" id="2nO-ek-qaL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="ArB-HK-2GV">
+                                <connections>
+                                    <action selector="photosTapped:" destination="gKj-Ww-YkR" id="4xB-kX-yze"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="gameImageView" destination="0Oo-rh-BSj" id="m4I-iP-GYb"/>
+                        <outlet property="titleTextField" destination="7iI-fM-AGz" id="2RY-dr-atn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVO-7C-eVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,4 +122,7 @@
             <point key="canvasLocation" x="319" y="137"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Asset 1.png" width="315" height="225"/>
+    </resources>
 </document>
